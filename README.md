@@ -13,94 +13,71 @@ Manual identity verification during exams is time-consuming, error-prone, and vu
 This project aims to automate identity verification by:
 
       Detecting faces in real-time
-      
       Extracting student details from exam documents
-      
       Performing multi-level verification to detect mismatches and fraud
 
 **Key Features**
 
-            Face detection using Haar Cascade Classifier
-            
-            Text extraction using Optical Character Recognition (OCR)
-            
-            Multi-stage identity verification pipeline
-            
-            Automated fraud detection and alert mechanism
-            
-            Fully reproducible implementation in Google Colab
+      Face detection using Haar Cascade Classifier
+      Text extraction using Optical Character Recognition (OCR)
+      Multi-stage identity verification pipeline
+      Automated fraud detection and alert mechanism
+      Fully reproducible implementation in Google Colab
 
 
 **System Workflow**
 
-       Capture the live webcam image of the student   
+       Capture the live webcam image of the student
+       
        Detect faces using Haar Cascade  
+       
        Extract student name and image from the hall ticket using OCR 
+       
        Retrieve registered student data from the database 
+       
        Perform the following validations:
-       Live image vs Hall ticket image
-       Live image vs Database image
-       Hall ticket name vs Database name 
-       Flag the student as Valid or Potential Fraud 
-       Trigger an alert if discrepancies are found
+       
+             Live image vs Hall ticket image
+             
+             Live image vs Database image
+             
+             Hall ticket name vs Database name 
+             
+             Flag the student as Valid or Potential Fraud 
+             
+             Trigger an alert if discrepancies are found
         
 
 
 **Technologies Used**
 
       Python
-      
       OpenCV
-      
       Haar Cascade Classifier
-      
       Tesseract OCR
-      
       NumPy
-      
       Google Colab
 
 **Project Structure**
 
 Exam-Fraud-Detection/
-
 │
-
 ├── notebooks/
-
 │   └── exam_fraud_detection.ipynb
-
+|
 │
-
-├── data/
-
-│   ├── hall_ticket_images/
-
-│   ├── database_images/
-
-│   └── sample_webcam_images/
-
-│
-
 ├── haarcascade/
-
 │   └── haarcascade_frontalface_default.xml
-
 │
-
 ├── README.md
 
 
 **How to Run the Project**
 
       Open the notebook in Google Colab
-      
       Upload required datasets (hall ticket images, database images)
-      
       Run the notebook cells sequentially
-      
       Allow webcam access when prompted
-      
       Observe verification results and fraud alerts
 
 
